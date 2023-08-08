@@ -10,7 +10,250 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
+    <header class="header">
+      <div class="header__menu menu">
+        <button
+          type="button"
+          class="menu__buttom button-menu button-menu__burger"
+        >
+          <img class="button-icon__img" src="./img/burger.png" arl="burger" />
+        </button>
+
+        <a class="menu__logo"
+          ><img class="logo" src="img/Group.png" arl="Логотип"
+        /></a>
+
+        <div class="menu__divider divider"></div>
+
+        <button
+          type="button"
+          class="menu__buttom button-menu button-menu__call"
+        >
+          <img class="button-icon__img" src="img/call.svg" arl="call" />
+        </button>
+
+        <button
+          type="button"
+          class="menu__buttom button-menu button-menu__chat"
+        >
+          <img class="button-icon__img" src="img/chat.svg" arl="chat" />
+        </button>
+
+        <button
+          type="button"
+          class="menu__buttom button-menu button-menu__profile"
+        >
+          <img class="button-icon__img" src="img/profile.svg" arl="profile" />
+        </button>
+
+        <div class="menu__divider divider--2"></div>
+
+        <button type="button" class="menu__buttom button-menu">
+          <img class="button-icon__img" src="img/repair.svg" arl="repair" />
+        </button>
+
+        <button type="button" class="menu__buttom button-menu">
+          <img class="button-icon__img" src="img/checkstatus.svg" arl="" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="macet1_3">
+        <div class="main__h">
+          <span class="decor-bloc-h decor-bloc-h--size--m"></span>
+          <h1 class="main__h--text h1">Услуги и сервисы</h1>
+
+          <div class="main__button">
+            <button type="button" class="main__button-menu button-menu">
+              Оставить заявку
+              <img class="button-icon__img" src="img/repair.svg" arl="" />
+            </button>
+
+            <button type="button" class="main__button-menu button-menu">
+              Статус ремонта
+              <img class="button-icon__img" src="img/checkstatus.svg" arl="" />
+            </button>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="nav__button nav__button--selected"
+            >Ремонтируемые устройства</button
+          >
+          <button class="nav__button">Дополнительные услуги</button>
+          <button class="nav__button">Цены на услуги</button>
+          <button class="nav__button">Адреса сервисных центров</button>
+          <button class="nav__button">Специальные цены</button>
+          <button class="nav__button">Отзывы</button>
+        </nav>
+        <article class="article">
+          <div class="container">
+            <p class="text1"
+              >Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.</p
+            >
+            <p class="text2"
+              >Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.</p
+            >
+
+            <button class="button-read-more">
+              <span class="button-read-more__icom"></span>
+              <span class="button-read-more__text">Читать далее</span>
+            </button>
+          </div>
+          <img
+            src="img/cps.jpg"
+            arl="logo"
+            class="article__img"
+            width="530px"
+          />
+        </article>
+      </section>
+      <section class="macet1_5">
+        <div class="brends">
+          <h1 class="h-menu-brands">Ремонт техники различных брендов</h1>
+        </div>
+        <div class="container">
+          <div class="slider swiper">
+            <div class="swiper-wrapper menu-brands">
+              <div class="swiper-slide button-menu-brands">
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--lenovo"
+                    src="img/Lenovo.png"
+                    alt="Lenovo"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+              <div class="swiper-slide button-menu-brands">
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--samsung"
+                    src="img/Samsung.png"
+                    alt="Samsung"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+              <div class="swiper-slide button-menu-brands">
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--apple"
+                    src="img/Apple.png"
+                    alt="Apple"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+              <div
+                data-hidden="tablet"
+                class="swiper-slide button-menu-brands button-menu-brands--hidden"
+              >
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--viewSonic"
+                    src="img/ViewSonic.png"
+                    alt="ViewSonic"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+              <div class="swiper-slide button-menu-brands">
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--bosch"
+                    src="img/Bosch.png"
+                    alt="Bosch"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+              <div class="swiper-slide button-menu-brands">
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--hp"
+                    src="img/hp.png"
+                    alt="hp"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+              <div class="swiper-slide button-menu-brands">
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--acer"
+                    src="img/Acer.png"
+                    alt="Acer"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+              <div
+                data-hidden="tablet"
+                class="swiper-slide button-menu-brands button-menu-brands--hidden"
+              >
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--sony"
+                    src="img/Sony.svg"
+                    alt="Sony"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+              <div
+                data-hidden="desktop"
+                class="swiper-slide button-menu-brands button-menu-brands--hiddenDesktop"
+              >
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--lenovo"
+                    src="img/Lenovo.png"
+                    alt="Lenovo"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+              <div
+                data-hidden="desktop"
+                class="swiper-slide button-menu-brands button-menu-brands--hiddenDesktop"
+              >
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--samsung"
+                    src="img/Samsung.png"
+                    alt="Samsung"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+              <div
+                data-hidden="desktop"
+                class="swiper-slide button-menu-brands button-menu-brands--hiddenDesktop"
+              >
+                <a href="#" class="buttonA">
+                  <img
+                    class="button-menu-brands__img button-menu-brands__img--apple"
+                    src="img/Apple.png"
+                    alt="Apple"
+                  />
+                  <div class="button-menu button-menu--goToBrand"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <button class="button-read-more">
+            <div class="button-read-more__icon"></div>
+            <a href="#" class="button-read-more__text">Показать все</a>
+          </button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
