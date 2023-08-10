@@ -1,0 +1,157 @@
+.table-prices {
+  margin-left: 8px;
+}
+
+.order {
+  width: 119px;
+  height: 32px;
+  border-radius: 16px;
+  background: #ff3e79;
+  color: $bgColor;
+  text-align: right;
+  font-family: TTLakes;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 200% */
+  letter-spacing: -0.15px;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  vertical-align: middle;
+  padding-left: 10px;
+  border: none;
+  right: 16px;
+  bottom: 16px;
+}
+
+.order::after {
+  content: url(../img/order-button.svg);
+  position: absolute;
+  right: 10px;
+}
+
+.table-prices__item {
+  width: 260px;
+  height: 200px;
+  border-radius: 6px;
+  background: $bgColor;
+  padding: 16px;
+  margin-top: 16px;
+  position: relative;
+}
+
+.table-prices__item--text {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  padding-top: 10px;
+}
+
+.table-prices__item--text--name::before {
+  content: 'Ремонтные услуги';
+  display: block;
+  color: $hText;
+  line-height: 16px;
+}
+
+.table-prices__item--text--value::before {
+  content: 'Цена';
+  display: block;
+  color: $hText;
+  line-height: 16px;
+}
+
+.table-prices__item--text--time::before {
+  content: 'Срок';
+  display: block;
+  color: $hText;
+  line-height: 16px;
+}
+
+.explanation {
+  padding: 32px;
+  padding-right: 0;
+  display: inline-block;
+  font-size: 14px;
+  max-width: 420px;
+}
+.offer {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  padding: 16px 32px;
+  position: relative;
+  text-decoration: none;
+  color: $text;
+}
+
+.offer::after {
+  content: url(../img/more.svg);
+  position: absolute;
+}
+
+.footer {
+  border-top: 2px solid $shadov;
+  text-align: center;
+  font-size: 14px;
+  color: $hText;
+
+  &p {
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .h-table-prices {
+    display: none;
+  }
+  .explanation {
+  }
+}
+
+@media (min-width: 768px) {
+  .table-prices__item--text--time::before,
+  .table-prices__item--text--value::before,
+  .table-prices__item--text--name::before {
+    display: none;
+  }
+
+  .table-prices {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    background-color: $bgColor;
+    margin-left: 32px;
+    margin-right: 32px;
+    border-radius: 6px;
+  }
+
+  .table-prices__item {
+    margin: 0;
+    border-radius: 0;
+    width: auto;
+    height: 64px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 0.5fr;
+    border-bottom: 1px solid $a_brends;
+  }
+
+  .order {
+    right: 24px;
+  }
+
+  .h-table-prices {
+    margin-left: 48px;
+    margin-right: 48px;
+    font-size: 14px;
+    color: $hText;
+    background-color: $bgBody;
+    border: 0;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

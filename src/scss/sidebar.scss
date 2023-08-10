@@ -1,0 +1,134 @@
+.header-container--sidebar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 5px;
+  min-height: 100px;
+  padding: 20px;
+  background-color: $bgColor;
+}
+
+.button-item-sidebar {
+  padding: 0;
+  background-color: #ffffff;
+  border: 0;
+}
+
+.button-item-sidebar--burger {
+  width: 40px;
+}
+
+.button-item-sidebar--checkstatus {
+  margin-left: auto;
+}
+
+/*Меню*/
+
+.nav__button--sidebar {
+  display: block;
+  font-size: 16px;
+  letter-spacing: -0.2;
+  line-height: 24px;
+  width: 100%;
+  height: 70px;
+  text-align: left;
+  padding-left: 25px;
+  padding-right: 0;
+  border: 0;
+  background-color: #ffffff;
+  font-family: 'TTLakes';
+  font-weight: 600;
+  color: #1b1c21;
+  white-space: nowrap;
+}
+
+.nav__button--sidebar:hover,
+.button-item-sidebar:hover,
+.button-language:hover {
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+.nav__button--sidebar--selected {
+  width: 100%;
+  padding-left: 21px;
+  color: #7e7e82;
+}
+.nav__button--sidebar--selected::before {
+  content: url(../img/highlight.svg);
+  height: 32px;
+  width: 4px;
+  position: relative;
+  left: -21px;
+  top: 15px;
+}
+/*Контакты*/
+
+.footer-container--sidebar {
+  font-family: 'TT Lakes';
+  font-weight: 600;
+  color: #1b1c21;
+  padding-left: 25px;
+  padding-bottom: 20px;
+  background-color: $bgColor;
+  padding-top: 200px;
+  padding-bottom: auto;
+}
+
+.contacts {
+  align-items: end;
+}
+
+.footer__sidebar {
+  margin-right: 10px;
+  margin-top: 140px;
+}
+
+.footer-container__button--sidebar {
+  margin-right: 10px;
+}
+
+.number {
+  font-family: TTLakes-bold;
+  font-weight: 800;
+  color: #1b1c21;
+  font-size: 24px;
+}
+
+.footer__button-language {
+  padding-top: 30px;
+}
+
+.button-language {
+  font-family: TTLakes;
+  font-weight: 600;
+  border: 0;
+  background-color: #ffffff;
+}
+
+.button-language--selected {
+  color: #7e7e82;
+}
+
+.mail {
+  font-family: TTLakes;
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #1b1c21;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+@media (max-width: 1365px) {
+}
+@media (min-width: 1366px) {
+  .button-item-sidebar--burger {
+    display: none;
+  }
+  .header-container--sidebar {
+    grid-template-columns: 1fr 3fr;
+  }
+  .sidebar {
+    width: 320px;
+    height: 100%;
+  }
+}

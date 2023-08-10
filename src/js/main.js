@@ -1,4 +1,4 @@
-import './index'
+import './cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js'
 const options = {
   speed: 1000,
   loop: true,
@@ -34,12 +34,13 @@ const options = {
     el: '.swiper-pagination'
   }
 }
+
 let swiper = new Swiper('.swiper', options)
 
 let buttonMore = document.querySelector('.button-read-more')
 
 function handleButtonClick() {
-  let buttonMoreIcon = buttonMore.querySelector('.button-read-more__icon')
+  let buttonMoreIcom = buttonMore.querySelector('.button-read-more__icon')
   let buttonMoreText = buttonMore.querySelector('.button-read-more__text')
   let buttonsMenuTablet = document.querySelectorAll('[data-hidden="tablet"]')
   let buttonsMenuDesktop = document.querySelectorAll('[data-hidden="desktop"]')
@@ -52,12 +53,12 @@ function handleButtonClick() {
     element.classList.toggle('button-menu-brands--hiddenDesktop')
   })
 
-  if (buttonMoreIcon.classList.contains('button-read-more__icon--hidden')) {
+  if (buttonMoreIcom.classList.contains('button-read-more__icon--hidden')) {
     buttonMoreText.textContent = 'Показать все'
-    buttonMoreIcon.classList.remove('button-read-more__icon--hidden')
+    buttonMoreIcom.classList.remove('button-read-more__icon--hidden')
   } else {
     buttonMoreText.textContent = 'Скрыть'
-    buttonMoreIcon.classList.add('button-read-more__icon--hidden')
+    buttonMoreIcom.classList.add('button-read-more__icon--hidden')
   }
 }
 

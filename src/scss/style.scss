@@ -1,7 +1,9 @@
+@import './swiper.scss';
 @import './variables';
-@import './1_4.scss';
+@import './sidebar.scss';
 @import './1_5.scss';
 @import './1_3.scss';
+@import './group-prices.scss';
 @import './fons';
 
 html {
@@ -18,4 +20,25 @@ body {
   font-family: TTLakes;
   background-color: $bgBody;
   color: $text;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  display: flex;
+}
+
+.body__sidebar {
+  background-color: $bgColor;
+}
+
+p {
+  margin: 0;
+  color: none;
+}
+
+@media (max-width: 1365px) {
+  .body__sidebar {
+    display: none;
+  }
+  body {
+    display: block;
+  }
 }

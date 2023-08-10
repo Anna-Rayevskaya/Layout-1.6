@@ -130,18 +130,25 @@
 
 .button-read-more__icom {
   background-image: url(../img/icon.svg);
-  background-size: 7.41px 10.29px;
+  background-position: center;
   background-repeat: no-repeat;
-  padding-right: 8.3px;
-  padding-left: 8.3px;
-  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
 }
 
 .button-read-more__text {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  font-weight: 510;
+  font-weight: 600;
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'TTLakes';
+  text-decoration: none;
+  color: $text;
 }
 
 .article__img {
