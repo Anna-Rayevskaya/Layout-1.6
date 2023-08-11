@@ -1,3 +1,13 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+}
 .header-container--sidebar {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
@@ -9,11 +19,12 @@
 
 .button-item-sidebar {
   padding: 0;
-  background-color: #ffffff;
+  background-color: transparent;
   border: 0;
+  display: inline-block;
 }
 
-.button-item-sidebar--burger {
+.button-item-sidebar--burger-close {
   width: 40px;
 }
 
@@ -70,8 +81,7 @@
   padding-left: 25px;
   padding-bottom: 20px;
   background-color: $bgColor;
-  padding-top: 200px;
-  padding-bottom: auto;
+  margin-top: auto;
 }
 
 .contacts {
@@ -118,10 +128,12 @@
   text-decoration: none;
   margin-bottom: 15px;
 }
-@media (max-width: 1365px) {
+.fogOfWar--sidebar {
+  z-index: 4;
 }
-@media (min-width: 1366px) {
-  .button-item-sidebar--burger {
+
+@media (min-width: 1120px) {
+  .button-item-sidebar--burger-close {
     display: none;
   }
   .header-container--sidebar {
@@ -130,5 +142,9 @@
   .sidebar {
     width: 320px;
     height: 100%;
+    box-shadow: none;
+  }
+  .fogOfWar--sidebar {
+    display: none;
   }
 }

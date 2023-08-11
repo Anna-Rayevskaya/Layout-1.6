@@ -167,6 +167,9 @@
   .main__button-menu {
     display: none;
   }
+  .button-menu__call--sidebar {
+    display: inline-block;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1119px) {
@@ -175,7 +178,7 @@
   .button-menu__profile,
   .divider--2,
   .text2 {
-    display: block;
+    display: inline-block;
   }
 
   .main__button-menu {

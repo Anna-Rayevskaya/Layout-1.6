@@ -14,12 +14,79 @@
     /> -->
   </head>
   <body class="body">
-    <div class="body__sidebar">
+    <div class="feedback">
+      <div class="fogOfWar"></div>
+      <div class="feedback__content">
+        <button type="button" class="burger-close button-item-sidebar">
+          <img class="button-icon__img" src="./img/burger-close.svg" arl="" />
+        </button>
+        <h1 class="h__modal-window">Обратная связь</h1>
+        <form action="#">
+          <input
+            type="text"
+            placeholder="Имя"
+            class="feedback__content--input"
+          />
+          <input
+            type="tel"
+            placeholder="Телефон"
+            class="feedback__content--input"
+          />
+          <input
+            type="email"
+            placeholder="Электронная почта"
+            class="feedback__content--input"
+          />
+          <input
+            type="textarea"
+            height="100px"
+            placeholder="Сообщение"
+            class="feedback__content--input feedback__content--input--sms"
+          />
+          <button type="submit" class="order order-send">Отправить</button>
+        </form>
+        <p class="feedback__content--text"
+          >Нажимая “отправить”, вы даете согласие на
+          <span class="feedback__content--text--important"
+            >обработку персональных данных</span
+          >
+          и соглашаетесь с нашей
+          <span class="text--important">политикой конфиденциальности</span></p
+        >
+      </div>
+    </div>
+    <div class="request-call">
+      <div class="fogOfWar"></div>
+      <div class="request-call__content">
+        <button type="button" class="burger-close button-item-sidebar">
+          <img class="button-icon__img" src="./img/burger-close.svg" arl="" />
+        </button>
+        <h1 class="h__modal-window">Заказать звонок</h1>
+        <form action="#">
+          <input
+            type="tel"
+            placeholder="Телефон"
+            class="request-call__content--input"
+          />
+          <button type="submit" class="order order-send">Отправить</button>
+        </form>
+        <p class="request-call__content--text"
+          >Нажимая “отправить”, вы даете согласие на
+          <span class="request-call__content--text--important"
+            >обработку персональных данных</span
+          >
+          и соглашаетесь с нашей
+          <span class="text--important">политикой конфиденциальности</span></p
+        >
+      </div>
+    </div>
+    <div class="body__sidebar body__sidebar--close">
+      <div class="fogOfWar fogOfWar--sidebar"></div>
       <div class="sidebar">
         <div class="header-container--sidebar">
           <button
             type="button"
-            class="button-item-sidebar button-item-sidebar--burger"
+            class="button-item-sidebar button-item-sidebar--burger-close"
           >
             <img class="button-icon__img" src="./img/burger-close.svg" arl="" />
           </button>
@@ -52,21 +119,22 @@
         <div class="footer-container--sidebar">
           <button
             type="button"
+            class="button-item-sidebar footer-container__button--sidebar button-menu__call button-menu__call--sidebar"
+          >
+            <img class="button-icon__img" src="./img/call.svg" arl="#" />
+          </button>
+
+          <button
+            type="button"
             class="button-item-sidebar footer-container__button--sidebar"
           >
-            <img class="button-icon__img" src="./img/call.svg" arl="" />
+            <img class="button-icon__img" src="./img/chat.svg" arl="#" />
           </button>
           <button
             type="button"
             class="button-item-sidebar footer-container__button--sidebar"
           >
-            <img class="button-icon__img" src="./img/chat.svg" arl="" />
-          </button>
-          <button
-            type="button"
-            class="button-item-sidebar footer-container__button--sidebar"
-          >
-            <img class="button-icon__img" src="./img/profile.svg" arl="" />
+            <img class="button-icon__img" src="./img/profile.svg" arl="#" />
           </button>
           <div class="contacts">
             <a href="#" class="mail">mail@cps.com</a>

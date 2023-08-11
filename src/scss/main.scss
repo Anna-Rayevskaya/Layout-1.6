@@ -14,9 +14,11 @@ body {
   color: $text;
   line-height: 24px;
   letter-spacing: -0.2px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 320px auto;
 }
 
+.body__sidebar--close,
 .body__sidebar {
   background-color: $bgColor;
 }
@@ -26,9 +28,13 @@ p {
   color: none;
 }
 
-@media (max-width: 1365px) {
-  .body__sidebar {
+@media (max-width: 1119px) {
+  .body__sidebar--close {
     display: none;
+  }
+
+  .footer-container--sidebar {
+    padding-top: auto;
   }
   body {
     display: block;

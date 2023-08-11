@@ -73,3 +73,54 @@ buttonMore.addEventListener('click', handleButtonClick)
 //   swiper.destroy()
 //   swiper = new Swiper('.swiper', options)
 // })
+
+//menu
+let bodySidebarClose = document.querySelector('.body__sidebar--close')
+let sidebarBurger = document.querySelector('.button-item-sidebar--burger-close')
+if (window.innerWidth < 1365) {
+  let menuBurger = document.querySelector('.button-menu__burger')
+
+  menuBurger.addEventListener('click', function () {
+    bodySidebarClose.classList.remove('body__sidebar--close')
+  })
+  sidebarBurger.addEventListener('click', function () {
+    bodySidebarClose.classList.add('body__sidebar--close')
+  })
+}
+
+//модалка заказать звонок
+
+let menuCall = document.querySelectorAll('.button-menu__call')
+let requestCall = document.querySelector('.request-call')
+let feedback = document.querySelector('.feedback')
+for (let i = 0; i < menuCall.length; i++) {
+  menuCall[i].addEventListener('click', function () {
+    requestCall.classList.add('request-call--visible')
+  })
+}
+
+let burgerClose = document.querySelectorAll('.burger-close')
+for (let i = 0; i < burgerClose.length; i++) {
+  burgerClose[i].addEventListener('click', function () {
+    requestCall.classList.remove('request-call--visible')
+    feedback.classList.remove('feedback--visible')
+  })
+}
+
+let fogOfWar = document.querySelectorAll('.fogOfWar')
+for (let i = 0; i < fogOfWar.length; i++) {
+  fogOfWar[i].addEventListener('click', function () {
+    feedback.classList.remove('feedback--visible')
+    bodySidebarClose.classList.add('body__sidebar--close')
+    requestCall.classList.remove('request-call--visible')
+  })
+}
+//модалка обратная связь
+
+let menuChat = document.querySelectorAll('.button-menu__chat')
+
+for (let i = 0; i < menuChat.length; i++) {
+  menuChat[i].addEventListener('click', function () {
+    feedback.classList.add('feedback--visible')
+  })
+}
