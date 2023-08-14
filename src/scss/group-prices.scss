@@ -107,6 +107,16 @@
   .h-table-prices {
     display: none;
   }
+  .swiper-block {
+    width: 30px;
+    height: 40px;
+  }
+  .table-prices {
+    display: flex;
+  }
+  .explanation {
+    padding-left: 16px;
+  }
 }
 
 @media (min-width: 768px) {

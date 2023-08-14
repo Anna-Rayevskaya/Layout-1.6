@@ -18,17 +18,17 @@ body {
   grid-template-columns: 320px auto;
 }
 
-.body__sidebar--close,
-.body__sidebar {
-  background-color: $bgColor;
-}
+// .body__sidebar--close,
+// .body__sidebar {
+//   background-color: $bgColor;
+// }
 
 p {
   margin: 0;
   color: none;
 }
 
-@media (max-width: 1119px) {
+@media (max-width: 1440px) {
   .body__sidebar--close {
     display: none;
   }
@@ -38,5 +38,12 @@ p {
   }
   body {
     display: block;
+  }
+}
+@media (min-width: 1440px) {
+  .body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1426px;
   }
 }

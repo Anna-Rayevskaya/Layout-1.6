@@ -1,5 +1,51 @@
-// import './cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js'
-// console.log('text')
+if (window.innerWidth < 767) {
+  const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: `auto`,
+    spaceBetween: 16,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        enabled: true
+      },
+      320: {
+        slidesPerView: 1.3,
+        enabled: true
+      },
+      360: {
+        slidesPerView: 1.47,
+        enabled: true
+      },
+      390: {
+        slidesPerView: 1.6,
+        enabled: true
+      },
+      420: {
+        slidesPerView: 2,
+        enabled: true
+      },
+      768: {
+        enabled: false
+      }
+    },
+
+    pagination: {
+      el: '.swiper-pagination'
+    }
+  })
+}
+
+if (window.innerWidth > 767) {
+  let swiperWrapperDelete = document.querySelector('.table-prices')
+  swiperWrapperDelete.classList.remove('swiper-wrapper')
+}
+
 // const options = {
 //   speed: 1000,
 //   loop: true,
@@ -38,13 +84,19 @@
 
 // let swiper = new Swiper('.swiper', options)
 
-let buttonMore = document.querySelector('.button-read-more--brends')
+// window.addEventListener('orientationchange', () => {
+//   swiper.destroy()
+//   swiper = new Swiper('.swiper', options)
+// })
 
-function handleButtonClick() {
-  let buttonMoreIcon = buttonMore.querySelector(
+//button More Brends
+let buttonMoreBrends = document.querySelector('.button-read-more--brends')
+
+function handleButtonClickBrends() {
+  let buttonMoreIcon = buttonMoreBrends.querySelector(
     '.button-read-more__icon--brends'
   )
-  let buttonMoreText = buttonMore.querySelector(
+  let buttonMoreText = buttonMoreBrends.querySelector(
     '.button-read-more__text--brends'
   )
   let buttonsMenuTablet = document.querySelectorAll('[data-hidden="tablet"]')
@@ -67,12 +119,44 @@ function handleButtonClick() {
   }
 }
 
-buttonMore.addEventListener('click', handleButtonClick)
+buttonMoreBrends.addEventListener('click', handleButtonClickBrends)
 
-// window.addEventListener('orientationchange', () => {
-//   swiper.destroy()
-//   swiper = new Swiper('.swiper', options)
-// })
+//button More Technique
+
+let buttonMoreTechnique = document.querySelector('.button-read-more--technique')
+
+function handleButtonClickTechnique() {
+  let buttonMoreIconTechnique = buttonMoreTechnique.querySelector(
+    '.button-read-more__icon--technique'
+  )
+  let buttonMoreTextTechnique = buttonMoreTechnique.querySelector(
+    '.button-read-more__text--technique'
+  )
+
+  let techniqueHidden = document.querySelectorAll('[data-hidden="hidden"]')
+
+  techniqueHidden.forEach((element) => {
+    element.classList.toggle('a__block--technique--hidden')
+  })
+
+  if (
+    buttonMoreIconTechnique.classList.contains(
+      'button-read-more__icon--hidden-technique'
+    )
+  ) {
+    buttonMoreTextTechnique.textContent = 'Показать все'
+    buttonMoreIconTechnique.classList.remove(
+      'button-read-more__icon--hidden-technique'
+    )
+  } else {
+    buttonMoreTextTechnique.textContent = 'Скрыть'
+    buttonMoreIconTechnique.classList.add(
+      'button-read-more__icon--hidden-technique'
+    )
+  }
+}
+
+buttonMoreTechnique.addEventListener('click', handleButtonClickTechnique)
 
 //menu
 let bodySidebarClose = document.querySelector('.body__sidebar--close')

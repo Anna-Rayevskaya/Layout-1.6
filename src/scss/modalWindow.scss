@@ -92,5 +92,41 @@
 }
 
 .order-send {
-  top: 60%;
+  top: 550px;
+}
+.order-send-call {
+  top: 300px;
+}
+
+@media (max-width: 767px) {
+  .feedback__content,
+  .request-call__content {
+    width: 320px;
+    padding-left: 16px;
+  }
+
+  .burger-close {
+    top: 35px;
+    right: 270px;
+  }
+  .h__modal-window {
+    padding-top: 104px;
+  }
+
+  .h__modal-window::before {
+    right: 316px;
+  }
+
+  .order-send {
+    top: 590px;
+  }
+
+  .order-send-call {
+    top: 330px;
+  }
+
+  .feedback__content--input,
+  .request-call__content--input {
+    width: 280px;
+  }
 }

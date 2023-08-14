@@ -29,7 +29,7 @@
   height: 40px;
 }
 
-.menu__buttom {
+.menu__button {
   margin-top: 24px;
 }
 
@@ -167,12 +167,13 @@
   .main__button-menu {
     display: none;
   }
-  .button-menu__call--sidebar {
+  .button-menu__call--sidebar,
+  .button-menu__chat--sidebar {
     display: inline-block;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1119px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   .button-menu__call,
   .button-menu__chat,
   .button-menu__profile,
@@ -220,7 +221,7 @@
   }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1440px) {
   .main {
     padding-top: 40px;
     min-height: 800px;
