@@ -23,7 +23,7 @@
 .request-call__content {
   z-index: 10;
   background-color: $bgColor;
-  width: 440px;
+  max-width: 440px;
   height: 100%;
   position: fixed;
   top: 0;
@@ -38,8 +38,12 @@
   position: absolute;
   top: 10px;
   right: 450px;
+  z-index: 100;
 }
 
+.button-container-request-call {
+  position: relative;
+}
 .h__modal-window {
   font-family: TTLakes-bold;
   font-size: 24px;
@@ -98,23 +102,28 @@
   top: 300px;
 }
 
+.modal-container {
+  overflow: scroll;
+}
+
 @media (max-width: 767px) {
   .feedback__content,
   .request-call__content {
-    width: 320px;
+    width: 100%;
     padding-left: 16px;
   }
 
   .burger-close {
     top: 35px;
-    right: 270px;
+    left: 16px;
+    width: 40px;
   }
   .h__modal-window {
     padding-top: 104px;
   }
 
   .h__modal-window::before {
-    right: 316px;
+    left: 0;
   }
 
   .order-send {

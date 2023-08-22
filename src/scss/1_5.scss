@@ -85,7 +85,8 @@
 }
 
 .button-read-more__icon--brends,
-.button-read-more__icon--technique {
+.button-read-more__icon--technique,
+.button-read-more__icon {
   background-image: url(../img/icon.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -110,14 +111,13 @@
   display: inline-block;
   vertical-align: top;
   font-family: 'TTLakes';
-  text-decoration: none;
   color: $text;
 }
 
 @media (min-width: 768px) {
-  .main {
-    margin-left: 30px;
-  }
+  // .main {
+  //   margin-left: 30px;
+  // }
 
   .menu-brands {
     display: grid;
@@ -172,7 +172,7 @@
   }
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1120px) {
   .button-menu-brands {
     width: 240px;
   }

@@ -87,7 +87,6 @@
   padding-bottom: 16px;
   margin-top: 0;
   white-space: nowrap;
-  flex-wrap: nowrap;
   overflow-x: scroll;
 }
 
@@ -121,14 +120,14 @@
 }
 
 .button-read-more {
-  width: 132px;
+  max-width: 132px;
   height: 24px;
   border: 0;
   background-color: $bgBody;
   padding: 0;
 }
 
-.button-read-more__Icon {
+.button-read-more__icon {
   background-image: url(../img/icon.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -155,6 +154,7 @@
   margin: 0;
   max-width: 100%;
   height: auto;
+  max-height: 336px;
   padding: 15px 0;
 }
 
@@ -164,26 +164,30 @@
   .button-menu__profile,
   .divider--2,
   .text2,
+  .text3,
   .main__button-menu {
     display: none;
   }
   .button-menu__call--sidebar,
-  .button-menu__chat--sidebar {
+  .button-menu__chat--sidebar,
+  .text3--hidden {
     display: inline-block;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1119px) {
+  .main__button-menu,
+  .text3 {
+    display: none;
+  }
+
   .button-menu__call,
   .button-menu__chat,
   .button-menu__profile,
   .divider--2,
+  .text3--hidden,
   .text2 {
     display: inline-block;
-  }
-
-  .main__button-menu {
-    display: none;
   }
 
   .menu__logo {
@@ -221,22 +225,28 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1120px) {
   .main {
     padding-top: 40px;
-    min-height: 800px;
+    // min-height: 800px;
   }
-  .header {
+  .header,
+  .text3 {
     display: none;
   }
 
+  .text3--hidden {
+    display: inline-block;
+  }
+
   .nav {
+    flex-wrap: wrap;
     overflow: hidden;
   }
 
   .container {
     padding: 0 30px;
-    width: 50%;
+    // width: 50%;
   }
 
   .article {
@@ -245,16 +255,18 @@
 
   .article__img {
     margin-right: 40px;
-    width: 50%;
+    // width: 50%;
   }
 
   .button-menu {
     background-color: $bgBody;
-    width: 180px;
+    max-width: 180px;
   }
 
   .main__button {
     margin-left: auto;
+    display: flex;
+    gap: 16px 16px;
   }
 
   .button-icon__img {
@@ -267,5 +279,18 @@
     font-size: 16px;
     font-family: TTLakes;
     font-weight: 600;
+  }
+
+  .main__h--button {
+    display: flex;
+  }
+
+  .button-menu--desktop {
+    width: auto;
+    align-items: center;
+  }
+
+  .main__h--buttonText {
+    padding-right: 5px;
   }
 }

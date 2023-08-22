@@ -84,9 +84,14 @@ if (window.innerWidth > 767) {
 
 // let swiper = new Swiper('.swiper', options)
 
-// window.addEventListener('orientationchange', () => {
-//   swiper.destroy()
-//   swiper = new Swiper('.swiper', options)
+// window.addEventListener('resize', () => {
+//   if (window.innerWidth >= 1120) {
+//     let mainContainer = document.querySelector('.body__content')
+//     var maxWidth = window.innerWidth - 320
+//     mainContainer.style.setProperty('max-width', maxWidth)
+//     mainContainer.style.backgroundColor = 'red'
+//     console.log('text')
+//   }
 // })
 
 //button More Brends
@@ -157,6 +162,30 @@ function handleButtonClickTechnique() {
 }
 
 buttonMoreTechnique.addEventListener('click', handleButtonClickTechnique)
+
+//button More text3
+let buttonMoreText3 = document.querySelector('.button-read-more')
+
+function handleButtonClickText3() {
+  let buttonMoreIcon = buttonMoreText3.querySelector('.button-read-more__icon')
+  let buttonMoreText = buttonMoreText3.querySelector('.button-read-more__text')
+
+  let text3Hidden = document.querySelectorAll('[data-hidden="text-hidden"]')
+
+  text3Hidden.forEach((element) => {
+    element.classList.toggle('text3--hidden')
+  })
+
+  if (buttonMoreIcon.classList.contains('button-read-more__icon--hidden')) {
+    buttonMoreText.textContent = 'Показать все'
+    buttonMoreIcon.classList.remove('button-read-more__icon--hidden')
+  } else {
+    buttonMoreText.textContent = 'Скрыть'
+    buttonMoreIcon.classList.add('button-read-more__icon--hidden')
+  }
+}
+
+buttonMoreText3.addEventListener('click', handleButtonClickText3)
 
 //menu
 let bodySidebarClose = document.querySelector('.body__sidebar--close')

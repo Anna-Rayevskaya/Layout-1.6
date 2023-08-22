@@ -97,6 +97,7 @@
   text-align: center;
   font-size: 14px;
   color: $hText;
+  margin-top: 50px;
 
   &p {
     padding-top: 16px;
@@ -161,5 +162,7 @@
   .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    text-align: start;
   }
 }
