@@ -20,7 +20,7 @@
         <button type="button" class="burger-close button-item-sidebar">
           <img class="button-icon__img" src="./img/burger-close.svg" arl="" />
         </button>
-        <div class="modal-container"></div>
+        <div class="modal-container">
         <h1 class="h__modal-window">Обратная связь</h1>
         <form action="#">
           <input
@@ -44,9 +44,7 @@
             placeholder="Сообщение"
             class="feedback__content--input feedback__content--input--sms"
           />
-          <button type="submit" class="order order-send">Отправить</button>
-        </form>
-        <p class="feedback__content--text"
+          <p class="feedback__content--text"
           >Нажимая “отправить”, вы даете согласие на
           <span class="feedback__content--text--important"
             >обработку персональных данных</span
@@ -54,6 +52,11 @@
           и соглашаетесь с нашей
           <span class="text--important">политикой конфиденциальности</span></p
         >
+        <button type="submit" class="send feedback__send">Отправить</button>
+          
+        </form>
+        
+      </div>
       </div>
       </div>
     </div>
@@ -75,11 +78,7 @@
             placeholder="Телефон"
             class="request-call__content--input"
           />
-          <button type="submit" class="order order-send order-send-call"
-            >Отправить</button
-          >
-        </form>
-        <p class="request-call__content--text"
+          <p class="request-call__content--text"
           >Нажимая “отправить”, вы даете согласие на
           <span class="request-call__content--text--important"
             >обработку персональных данных</span
@@ -87,6 +86,11 @@
           и соглашаетесь с нашей
           <span class="text--important">политикой конфиденциальности</span></p
         >
+        <button type="submit " class="send send-call feedback__send"
+        >Отправить</button
+      >
+        </form>
+        
       </div>
       </div>
       <div class="fogOfWar"></div>
